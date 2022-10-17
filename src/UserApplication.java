@@ -9,7 +9,7 @@ public class UserApplication {
     public static void main(String[] args ){
         UserService userService = new UserService();
         userService.readUsers("data.txt");
-        boolean succsesfulLoged = false;
+        boolean successfulLogged = false;
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         for(int i = 0;i< 5;i++){
             System.out.println("Enter your email:");
@@ -21,14 +21,14 @@ public class UserApplication {
                 System.out.println("Welcome: "+
                         userService.getGlobalUserArray()[userService.getIndexOfLoggxedUser()].getName());
                 i = 5;
-                succsesfulLoged = true;
+                successfulLogged = true;
             } else {
                 if(i != 4){
                     System.out.println("Invalid login, please try again");
                 }
             }
         }
-        if(!succsesfulLoged){
+        if(!successfulLogged){
             System.out.println("Too many failed login attempts, you are now locked out.");
 
         }
