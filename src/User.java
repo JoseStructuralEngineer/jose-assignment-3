@@ -3,11 +3,17 @@
 public class User {
 
     private String username;
+
     private String password;
+
     private String name;
 
     public User() {
-
+    }
+    public User(String[] userData) {
+        this.username = userData[0];
+        this.password = userData[1];
+        this.name = userData[2];
     }
 
     public User(String username, String password, String name) {
